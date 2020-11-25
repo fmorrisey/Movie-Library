@@ -9,6 +9,7 @@ using WebAPISample.Models;
 
 namespace WebAPISample.Controllers
 {
+   
     [Route("api/[controller]")]
     [ApiController]
     public class MovieController : ControllerBase
@@ -18,11 +19,12 @@ namespace WebAPISample.Controllers
         {
             _context = context;
         }
+
         // GET api/movie
         [HttpGet]
         public IActionResult Get()
         {
-            // Retrieve all movies from db logic
+            var movie = _context.Movies.Select(m  =>  m); // Retrieve all movies from db logic
             return Ok(new string[] { "movie1 string", "movie2 string" });
         }
 
@@ -31,8 +33,9 @@ namespace WebAPISample.Controllers
         public IActionResult Get(int id)
         {
             // Retrieve movie by id from db logic
+            var movie = _context.Movies.Where(c => c.MovieId == id).FirstOrDefault();
             // return Ok(movie);
-            return Ok();
+            return Ok(movie);
         }
 
         // POST api/movie
