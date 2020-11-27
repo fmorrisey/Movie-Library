@@ -29,7 +29,7 @@ namespace WebAPISample
                     .AllowAnyMethod()
                     .AllowAnyHeader());
             });
-
+           
             services.AddDbContext<ApplicationContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("sqlConnection")));

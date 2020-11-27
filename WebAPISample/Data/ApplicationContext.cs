@@ -16,7 +16,7 @@ namespace WebAPISample.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
+            //modelBuilder.Entity<Table2>().Property(e => e.Table1Id).ValueGeneratedNever();
             modelBuilder.Entity<Movie>()
              .HasData(
                 new Movie { MovieId = 1, Title = "The Departed", Genre = "Drama", Director = "Martin Scorsese" },

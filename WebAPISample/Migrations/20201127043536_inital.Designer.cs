@@ -9,8 +9,8 @@ using WebAPISample.Data;
 namespace WebAPISample.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20201125205119_initial")]
-    partial class initial
+    [Migration("20201127043536_inital")]
+    partial class inital
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -31,9 +31,6 @@ namespace WebAPISample.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Genre")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PosterImg")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
