@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using WebAPISample.Data;
 using WebAPISample.Models;
 
@@ -56,7 +57,7 @@ namespace WebAPISample.Controllers
         }
 
         // PUT api/movie
-        [HttpPut]
+        [HttpPut("{id}")]
         public IActionResult Put([FromBody] Movie movie)
         {
             // Update movie in db logic
