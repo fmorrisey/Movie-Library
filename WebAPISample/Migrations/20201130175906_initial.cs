@@ -14,7 +14,8 @@ namespace WebAPISample.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(nullable: true),
                     Genre = table.Column<string>(nullable: true),
-                    Director = table.Column<string>(nullable: true)
+                    Director = table.Column<string>(nullable: true),
+                    PosterImg = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -23,14 +24,14 @@ namespace WebAPISample.Migrations
 
             migrationBuilder.InsertData(
                 table: "Movies",
-                columns: new[] { "MovieId", "Director", "Genre", "Title" },
+                columns: new[] { "MovieId", "Director", "Genre", "PosterImg", "Title" },
                 values: new object[,]
                 {
-                    { 1, "Martin Scorsese", "Drama", "The Departed" },
-                    { 2, "Christopher Nolan", "Drama", "The Dark Knight" },
-                    { 3, "Christopher Nolan", "Drama", "Inception" },
-                    { 4, "David Gordon Green", "Comedy", "Pineapple Express" },
-                    { 5, "John McTiernan", "Action", "Die Hard" }
+                    { 1, "Martin Scorsese", "Drama", null, "The Departed" },
+                    { 2, "Christopher Nolan", "Drama", null, "The Dark Knight" },
+                    { 3, "Christopher Nolan", "Drama", null, "Inception" },
+                    { 4, "David Gordon Green", "Comedy", null, "Pineapple Express" },
+                    { 5, "John McTiernan", "Action", null, "Die Hard" }
                 });
         }
 
