@@ -48,7 +48,6 @@ namespace WebAPISample.Controllers
         public IActionResult Post([FromBody] Movie movie)
         {
             // Create movie in db logic
-
             _context.Add(movie);
             _context.SaveChanges();
 
@@ -71,8 +70,8 @@ namespace WebAPISample.Controllers
         public IActionResult Delete(int id)
         {
             // Delete movie from db logic
-            var movieToRemove = _context.Movies.Where(m => m.MovieId == id).SingleOrDefault();
-            _context.Remove(movieToRemove);
+            var movie = _context.Movies.Where(m => m.MovieId == id).SingleOrDefault();
+            _context.Remove(movie);
             _context.SaveChanges();
             return Ok();
         }
