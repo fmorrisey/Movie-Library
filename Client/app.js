@@ -27,7 +27,6 @@ $(document).ready(function() {
             <input type="text" name="director" placeholder="Director" />
             <input type="text" name="genre" placeholder="Genre" />
             <input type="text" name="posterimg" placeholder="PosterImg" />
-
             <button type="submit">Submit</button>
             </form>`);
         })    
@@ -45,7 +44,7 @@ $(document).ready(function() {
                 Title : this["title"].value,
                 Director: this["director"].value,
                 Genre : this["genre"].value,
-                PosterImg: this["posterimg"].value
+                //PosterImg: this["posterimg"].value
                 
             };
     
@@ -76,7 +75,7 @@ $(document).ready(function() {
                 Title : this["title"].value,
                 Director: this["director"].value,
                 Genre : this["genre"].value,
-                PosterImg: this["posterimg"].value
+                //PosterImg: this["posterimg"].value
                 
             };
     
@@ -106,4 +105,3 @@ $(document).ready(function() {
    
 
 });
-

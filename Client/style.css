@@ -1,0 +1,88 @@
+body{
+    padding: 50px;
+    font: 16px;
+}
+a {color: #00B7FF;
+}
+
+#poster{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding: 10px 0;
+    overflow: auto;
+}
+
+h2 {
+    Font-Family: 'Merriweather', Serif;
+    Font-Size: 46px;
+}
+
+h4 {
+    Font-Family: 'Lora', Sans-Serif;
+    Font-Size: 24px;
+    font-style: italic;
+}
+
+ul {
+    padding: 0;
+}
+
+#divFill{
+    background: #EBF5FB;
+    padding: 10px;
+    margin: auto;
+}
+
+ul li {
+    list-style-type: none;
+    font: 16px;
+}
+
+ul li .edit{
+
+    display:none;
+}
+ul li.edit .edit{
+    
+    display: initial;
+}
+
+ul li.edit .noedit{
+    display: none;
+    
+}
+
+form { 
+    list-style-type: none;
+    padding: 15 px;
+    margin-bottom: 15 px;
+}
+
+p {
+    font: 16px  "mulish", "Sans";
+}
+
+button {
+    background-color: #008CBA;
+    display: inline-block;
+    font: 14px;
+    transition-duration: 0.4s;
+    border: 2px solid #008CBA; 
+    border-radius: 4px;
+    color: white;
+}
+
+button:hover {
+    background-color: #EBF5FB;
+    color: black;
+}
+
+.btn-special {
+    width: 20%
+}
+
+input {
+    width: 22%;
+}
