@@ -42,7 +42,11 @@ namespace WebAPISample
             {
                 app.UseDeveloperExceptionPage();
             }
+            // Add the following to redirect to landingpage.html
+            app.UseDefaultFiles();
 
+            app.UseStaticFiles();
+            
             app.UseHttpsRedirection();
 
             app.UseCors("CorsPolicy");
