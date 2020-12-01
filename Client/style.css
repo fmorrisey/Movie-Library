@@ -86,3 +86,6 @@ button:hover {
 input {
     width: 22%;
 }
+#addMovie{
+    display: none;
+}
