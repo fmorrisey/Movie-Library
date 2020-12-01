@@ -109,6 +109,7 @@ $(function (){
       $li.find("span.director").html(items.director);
       $li.find("span.genre").html(items.genre);
       //$li.find("span.posterImg").html(items.posterImg);
+      document.getElementById("poster").src = items.posterImg;
       $li.removeClass("edit");
     });
     
