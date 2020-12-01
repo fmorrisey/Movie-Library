@@ -27,6 +27,11 @@ namespace WebAPISample.Controllers
         {
             var movie = _context.Movies.ToList(); // Retrieve all movies from db logic
             return Ok(movie);
+
+            //var movie = _context.Movies.Select(M => M);
+            //var movieList = JsonConvert.SerializeObject(movie);
+
+            //return Ok(movieList);
         }
 
         // GET api/movie/5
@@ -57,10 +62,21 @@ namespace WebAPISample.Controllers
 
         // PUT api/movie
         [HttpPut("{id}")]
-        public IActionResult Put([FromBody] Movie movie)
+        //public IActionResult Put([FromBody] Movie movie)
+        public IActionResult Put(int id, Movie movie)
         {
+            var item = _context.Movies.Find(id);
+            if (item == null)
+            {
+                return NotFound();
+            }
+
             // Update movie in db logic
-            _context.Movies.Update(movie);
+            item.Director = movie.Director;
+            item.Genre = movie.Genre;
+            item.Title = movie.Title;
+            item.PosterImg = movie.PosterImg;
+            _context.Movies.Update(item);
             _context.SaveChanges();
 
             return Ok();
@@ -72,9 +88,21 @@ namespace WebAPISample.Controllers
         {
             // Delete movie from db logic
             var movie = _context.Movies.Where(m => m.MovieId == id).SingleOrDefault();
-            _context.Remove(movie);
-            _context.SaveChanges();
+
+            try
+            {
+                _context.Remove(movie);
+                _context.SaveChanges();
+            }
+            catch (ArgumentNullException)
+            {
+                return NotFound();
+            }
             return Ok();
+
+
+            
+
         }
     }
 }
