@@ -1,24 +1,7 @@
 $(function (){
     var $movieList = $('#movieList');
     var MovieTemplate = $('#movie-template').html();
-    // comment from forrest
-    // var MovieTemplate = "<li>" + "<p><strong>Title: </strong>{{title}},   <strong>Director:</strong>  {{director}},</p>" +
-    // "<p><strong>Genre:</strong>  {{genre}}, <strong>Poster:</strong>  {{posterImg}}<strong>MovieId </strong> {{movieId}}</p>" + 
-    // "<button data-id='{{movieId}}' class='delete'> Delete </button>" + "</li>"+ "<hr>";
-
-    //    function addMovieList(movie){
-//        $movieList.append(
-//          "<li><p><strong>Title: </strong>" +
-//            movie.title +
-//            "<strong>     Director:  </strong>" +
-//            movie.director +
-//            "<strong>     Genre:  </strong>" +
-//            movie.genre +
-//            "    Image:   " +
-//            movie.posterImg + "<button data-id = '{{MovieId}}' class='delete'>Delete</button>" +
-//            "</li>"
-//        ); 
-//    }
+    
    function addMovieList(movie) {
      $movieList.append(
        Mustache.render(MovieTemplate, movie)
