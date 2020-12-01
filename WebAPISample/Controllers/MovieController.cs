@@ -100,9 +100,6 @@ namespace WebAPISample.Controllers
             }
             return Ok();
 
-
-            
-
         }
     }
 }
