@@ -1,7 +1,7 @@
 $(function (){
     var $movieList = $('#movieList');
     var MovieTemplate = $('#movie-template').html();
-
+    // comment from forrest
     // var MovieTemplate = "<li>" + "<p><strong>Title: </strong>{{title}},   <strong>Director:</strong>  {{director}},</p>" +
     // "<p><strong>Genre:</strong>  {{genre}}, <strong>Poster:</strong>  {{posterImg}}<strong>MovieId </strong> {{movieId}}</p>" + 
     // "<button data-id='{{movieId}}' class='delete'> Delete </button>" + "</li>"+ "<hr>";
