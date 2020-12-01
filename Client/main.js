@@ -41,6 +41,7 @@ $(function (){
             //$("#response pre").html(movie);
             addMovieList(movie);
             $("#addMovie").toggle();
+            $("#addMovie").trigger("reset");
 
 
           },
@@ -97,13 +98,17 @@ $(function (){
         type: "PUT",
         contentType: "application/json",
         data: JSON.stringify(items),
-        success: function () {
-         
+        success: function (items) {
+          
         },
         error: function (jqXhr, textStatus, errorThrown) {
           console.log(errorThrown);
         },
       });
+      $li.find("span.title").html(items.title);
+      $li.find("span.director").html(items.director);
+      $li.find("span.genre").html(items.genre);
+      //$li.find("span.posterImg").html(items.posterImg);
       $li.removeClass("edit");
     });
     
